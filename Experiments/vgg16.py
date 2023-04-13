@@ -83,5 +83,6 @@ def load_image(filename):
 
 img = load_image('Jabuticaba.7.jpg')
 model2.predict(img)[0]
+
 '''
   
