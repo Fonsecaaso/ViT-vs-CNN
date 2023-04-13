@@ -80,20 +80,14 @@ test_data_transform = transforms.Compose([
         transforms.Normalize([0.49139968, 0.48215841, 0.44653091], [0.24703223, 0.24348513, 0.26158784])
     ])
 
-train_flowers_dataset = datasets.ImageFolder(root='/content/drive/MyDrive/USP/TCC/UvA_Tutorials/experiments/dataset_flowers/train',
+train_flowers_set = datasets.ImageFolder(root='/content/drive/MyDrive/USP/TCC/UvA_Tutorials/experiments/dataset_flowers_350_images_7_classes/train',
                                            transform=train_data_transform)
 
-val_flowers_dataset = datasets.ImageFolder(root='/content/drive/MyDrive/USP/TCC/UvA_Tutorials/experiments/dataset_flowers/train',
-                                           transform=test_data_transform)
-print(len(train_flowers_dataset))
-# pl.seed_everything(42)
-train_flowers_set,_ = torch.utils.data.random_split(train_flowers_dataset, [38,10])
-pl.seed_everything(42)
-_, val_flowers_set = torch.utils.data.random_split(train_flowers_dataset, [38,10])
-
-test_flowers_set = datasets.ImageFolder(root='/content/drive/MyDrive/USP/TCC/UvA_Tutorials/experiments/dataset_flowers/test',
+val_flowers_set = datasets.ImageFolder(root='/content/drive/MyDrive/USP/TCC/UvA_Tutorials/experiments/dataset_flowers_350_images_7_classes/val',
                                            transform=test_data_transform)
 
+test_flowers_set = datasets.ImageFolder(root='/content/drive/MyDrive/USP/TCC/UvA_Tutorials/experiments/dataset_flowers_350_images_7_classes/test',
+                                           transform=test_data_transform)
 
 
 train_loader = torch.utils.data.DataLoader(train_flowers_set,
