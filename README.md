@@ -55,6 +55,8 @@ Trabalho de Conclusão de Curso em desenvolvimento. Estou desenvolvendo modelo d
 
 #### Links para consulta:
 
+kanban: https://trello.com/b/cyxsrmqp/tcc-vit-vs-cnn
+
 https://www.robots.ox.ac.uk/~vgg/research/flowers/
 
 https://www.kaggle.com/code/milan400/flowers-classification-using-vgg19
